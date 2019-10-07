@@ -1,5 +1,7 @@
 /* Customisable hook */
 
+//preview[view:east, tilt:top diagonal]
+
 /* All lengths in millimetres */
 
 // Length of horizontal arm from vertical support to the centre of the holder
@@ -12,7 +14,7 @@ support_length = 180;
 holder_diameter = 40;
 
 // Cut a section out of the hook?
-cutout = "Yes"; // ["Yes", "No"]
+create_cutout = "Yes"; // [Yes, No]
 
 // Inside measurement along the top of the hook
 hook_inside_top_length = 25;
@@ -58,9 +60,9 @@ module create_hook() {
                 back_hook();
                 structure();
                 holder();
-                }
-                if (cutout == "Yes") {
-                    cutout();
+            }
+            if (create_cutout == "Yes") {
+                cutout();
             }
         }
 }
